@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 import ru.kkuzmichev.simpleappforespresso.R;
 import ru.kkuzmichev.simpleappforespresso.databinding.FragmentGalleryBinding;
+import ru.kkuzmichev.simpleappforespresso.ui.EspressoIdlingResources;
 
 public class GalleryFragment extends Fragment {
 
@@ -59,6 +60,7 @@ public class GalleryFragment extends Fragment {
 
 
     private void fakeLoadData() {
+        EspressoIdlingResources.increment();
         progressBar.setVisibility(View.VISIBLE);
         recyclerView.setVisibility(View.INVISIBLE);
         Handler handler = new Handler();
